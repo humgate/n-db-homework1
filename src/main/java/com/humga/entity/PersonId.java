@@ -23,4 +23,8 @@ public class PersonId implements Serializable {
     @Min(0) //constraint на возраст
     @Column(nullable = false)
     private int age;
+
+    public String toString() {
+        return this.name + ", " + this.surName + ", " + this.age;
+    }
 }

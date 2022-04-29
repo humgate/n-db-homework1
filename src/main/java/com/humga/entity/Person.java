@@ -1,6 +1,8 @@
 package com.humga.entity;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.Hibernate;
 
 import javax.persistence.Column;
@@ -11,7 +13,6 @@ import java.util.Objects;
 
 @Getter
 @Setter
-@ToString
 @NoArgsConstructor
 @Entity
 @Table(name = "persons")
@@ -42,5 +43,9 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hash(personId);
+    }
+
+    public String toString() {
+        return personId.toString() +", " + this.getPhoneNumber() + ", " + this.getCityOfLiving();
     }
 }
