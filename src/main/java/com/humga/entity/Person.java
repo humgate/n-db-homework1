@@ -12,8 +12,7 @@ import java.util.Objects;
 @Getter
 @Setter
 @ToString
-@RequiredArgsConstructor
-@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "persons")
 public class Person {
@@ -25,6 +24,12 @@ public class Person {
 
     @Column(name = "city_of_living", length = 128)
     private String cityOfLiving;
+
+    public Person(String name, String surName, int age, long phoneNumber, String cityOfLiving) {
+        this.personId = new PersonId(name, surName, age);
+        this.phoneNumber = phoneNumber;
+        this.cityOfLiving = cityOfLiving;
+    }
 
     @Override
     public boolean equals(Object o) {
