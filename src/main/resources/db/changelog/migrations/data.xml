@@ -1,0 +1,35 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet author="humga" id="002">
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">
+                SELECT COUNT(*) FROM persons
+            </sqlCheck>
+        </preConditions>
+        <insert tableName="persons">
+            <column name="name" value="Иван"/>
+            <column name="surname" value="Иванов"/>
+            <column name="age" value="40"/>
+            <column name="phone_number" value="73453432"/>
+            <column name="city_of_living" value="MOSCOW"/>
+        </insert>
+        <insert tableName="persons">
+            <column name="name" value="Петр"/>
+            <column name="surname" value="Петров"/>
+            <column name="age" value="31"/>
+            <column name="phone_number" value="73453477"/>
+            <column name="city_of_living" value="MOSCOW"/>
+        </insert>
+        <insert tableName="persons">
+            <column name="name" value="Сергей"/>
+            <column name="surname" value="Сергей"/>
+            <column name="age" value="25"/>
+            <column name="phone_number" value="73453337"/>
+            <column name="city_of_living" value="PODOLSK"/>
+        </insert>
+   </changeSet>
+</databaseChangeLog>
