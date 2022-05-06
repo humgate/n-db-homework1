@@ -10,3 +10,6 @@
 Создание и заполнение таблицы с использованием liquibase migrations (xml). Валидация БД hibernate. REST endpoint
 `/persons/by-city?city=<city>` отвечает результатами, полученными при помощи запроса репозитория к БД с использованием
 hibernate hql. Решение в ветке`feature/hibernate-migrations`
+Задача 5.1 [DAO слой c JPA Repositories](https://github.com/netology-code/jd-homeworks/blob/master/spring-jpa/task1/README.md) -
+Создание и заполнение таблицы с использованием Spring Data JPA Repository. Запросы к базе с использованием
+Spring Data JPA Repository query methods. Решение в ветке `feature/jpa-repository`
