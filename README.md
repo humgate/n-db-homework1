@@ -12,4 +12,7 @@
 hibernate hql. Решение в ветке`feature/hibernate-migrations`
 Задача 5.1 [DAO слой c JPA Repositories](https://github.com/netology-code/jd-homeworks/blob/master/spring-jpa/task1/README.md) -
 Создание и заполнение таблицы с использованием Spring Data JPA Repository. Запросы к базе с использованием
-Spring Data JPA Repository query methods. Решение в ветке `feature/jpa-repository`
+Spring Data JPA Repository query methods. Решение в ветке `feature/jpa-repository`.<br>
+Задача 5.2 [@Query](https://github.com/netology-code/jd-homeworks/blob/master/spring-jpa/task2/README.md) -
+Создание и заполнение таблицы с использованием Spring Data JPA Repository. Запросы к базе с использованием
+Spring Data JPA @Query JPQL methods. Решение в ветке `feature/jpa-repository-query`
