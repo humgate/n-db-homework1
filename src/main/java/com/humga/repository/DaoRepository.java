@@ -3,19 +3,25 @@ package com.humga.repository;
 import com.humga.entity.Person;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
 public class DaoRepository {
-    @PersistenceContext
-    private EntityManager entityManager;
+
+    private final DaoCrudRepository crudRepository;
+    DaoRepository(DaoCrudRepository crudRepository) {
+        this.crudRepository = crudRepository;
+    }
 
     public List<Person> getPersonsByCity(String city) {
-        return entityManager
-                .createQuery("select p from Person p where p.cityOfLiving = :city", Person.class)
-                .setParameter("city",city)
-                .getResultList();
+        return crudRepository.findPersonByCityOfLiving(city);
+    }
+
+    public List<Person> getPersonsByAgeLessThan(int age) {
+        return crudRepository.findByPersonIdAgeLessThanOrderByPersonIdAge(age);
+    }
+
+    public List<Person> getPersonByNameAndSurname(String name, String surname) {
+        return crudRepository.findByPersonIdNameAndPersonIdSurName(name, surname);
     }
 }

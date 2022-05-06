@@ -21,9 +21,13 @@ public class DbCommandLineRunnerInitializr implements CommandLineRunner {
     @PersistenceContext
     private EntityManager entityManager;
 
+
+
     @Override
     @Transactional
     public void run(String... args) {
+
+
         List<Person> list = new ArrayList<>();
         list.add(new Person("Иван","Иванов",40,73453432,"MOSCOW"));
         list.add(new Person("Петр","Петров",31,73453477,"MOSCOW"));

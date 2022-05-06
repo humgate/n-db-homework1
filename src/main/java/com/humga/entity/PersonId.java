@@ -1,8 +1,6 @@
 package com.humga.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -13,6 +11,8 @@ import java.io.Serializable;
 @EqualsAndHashCode
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class PersonId implements Serializable {
     @Column(nullable = false)
     private String name;

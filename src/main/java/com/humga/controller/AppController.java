@@ -15,10 +15,26 @@ public class AppController {
         AppController(AppService service) {this.service =service;}
 
         @GetMapping("/persons/by-city")
-        public List<String> getProduct(@RequestParam String city) {
+        public List<String> getPersonBtCity(@RequestParam String city) {
             return service.getPersonsByCity(city)
                     .stream()
                     .map(Person::toString)
                     .collect(Collectors.toList());
+        }
+
+        @GetMapping("/persons/by-agelessthan")
+        public List<String> getPersonByAgeLessThan(@RequestParam int age) {
+                return service.getPersonByAgeLessThan(age)
+                        .stream()
+                        .map(Person::toString)
+                        .collect(Collectors.toList());
+        }
+
+        @GetMapping("/persons/by-name&surname")
+        public List<String> getPersonByNameAndSurname(@RequestParam String name, @RequestParam String surname) {
+                return service.getPersonByNameAndSurname(name, surname)
+                        .stream()
+                        .map(Person::toString)
+                        .collect(Collectors.toList());
         }
 }
