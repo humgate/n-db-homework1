@@ -14,7 +14,7 @@ public class DaoRepository {
     }
 
     public List<Person> getPersonsByCity(String city) {
-        return crudRepository.findPersonByCityOfLiving(city);
+        return crudRepository.getByCity(city);
     }
 
     public List<Person> getPersonsByAgeLessThan(int age) {
@@ -22,6 +22,6 @@ public class DaoRepository {
     }
 
     public List<Person> getPersonByNameAndSurname(String name, String surname) {
-        return crudRepository.findByPersonIdNameAndPersonIdSurName(name, surname);
+        return crudRepository.getByNameSurname(name, surname);
     }
 }
