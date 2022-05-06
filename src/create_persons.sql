@@ -18,4 +18,7 @@ VALUES('Петр','Петров',31,73453477,'MOSCOW');
 INSERT INTO persons (name, surname, age, phone_number, city_of_living)
 VALUES('Сергей','Сергеев',25,73453337,'PODOLSK');
 
+select * from persons
+
+
 
