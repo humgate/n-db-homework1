@@ -15,7 +15,7 @@ public class AppController {
         AppController(AppService service) {this.service =service;}
 
         @GetMapping("/persons/by-city")
-        public List<String> getProduct(@RequestParam String city) {
+        public List<String> getPersonsByCity(@RequestParam String city) {
             return service.getPersonsByCity(city)
                     .stream()
                     .map(Person::toString)
