@@ -18,7 +18,7 @@ public class DaoRepository {
     }
 
     public List<Person> getPersonsByAgeLessThan(int age) {
-        return crudRepository.findByPersonIdAgeLessThanOrderByPersonIdAge(age);
+        return crudRepository.findByPersonIdAgeLessThanOrderByPersonIdAgeAsc(age);
     }
 
     public List<Person> getPersonByNameAndSurname(String name, String surname) {

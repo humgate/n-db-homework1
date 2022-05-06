@@ -5,6 +5,7 @@ import com.humga.entity.PersonId;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface DaoCrudRepository extends CrudRepository<Person, PersonId> {
 
@@ -12,7 +13,6 @@ public interface DaoCrudRepository extends CrudRepository<Person, PersonId> {
 
     List<Person> findByPersonIdNameAndPersonIdSurName(String name, String surname);
 
-    List<Person> findByPersonIdAgeLessThanOrderByPersonIdAge(int age);
-
-
+    List<Person> findByPersonIdAgeLessThanOrderByPersonIdAgeAsc(int age);
+    Optional<Person> findFirstByPersonIdAgeLessThanOrderByPersonIdAgeAsc(int age);
 }
