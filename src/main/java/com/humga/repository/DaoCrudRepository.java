@@ -27,6 +27,4 @@ public interface DaoCrudRepository extends CrudRepository<Person, PersonId> {
     //List<Person> findByPersonIdAgeLessThanOrderByPersonIdAge(int age);
     @Query("select p from Person p where p.personId.age < :age order by p.personId.age asc")
     List<Person> findByPersonIdAgeLessThanOrderByPersonIdAge(@Param("age") int age);
-
-
 }
